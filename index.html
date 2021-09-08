@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="top-bar">
+          <div class="main-title">
+            Unofficial MSBTE Diploma Final Year Merit List
+          </div>
+          <div class="sub-title">
+            This list is only for Reference and educational purpose. This is not
+            a official nor connected with any officials in MSBTE
+          </div>
+        </div>
+        <div class="top-row">
+          <div class="block">
+            <a href="credits.html"> See Credits </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <h2>Course wise merit List</h2>
+          </div>
+          <div class="courseblock c1">Mechanical</div>
+          <div class="courseblock c2">Computer Group</div>
+          <div class="courseblock c3">Civil</div>
+          <div class="courseblock c4">Electrical</div>
+        </div>
+        <div class="row">
+          <div class="title">
+            <h2>General Merit List</h2>
+          </div>
+          <div class="search-box">
+            <input
+              type="search"
+              name="studname"
+              id="srchbox"
+              placeholder="search your name"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="main-table">
+        <table>
+          <tr>
+            <th>General Merit Number</th>
+            <th>Group wise Merit Number</th>
+            <th>Student Name</th>
+            <th>Aggregate Score</th>
+            <th>Course Name</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script>
+      fetch("newdata.json")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data[i]);
+        });
+    </script>
+  </body>
+
+  <!-- <script>
+    async function getNewSummary() {
+      try {
+        const groups = await fetch(
+          "https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json"
+        );
+        const groupData = await groups.json();
+        console.log("Num documents: ", groupData.length);
+        console.log("Example document: ", groupData[0]);
+        const table = document.getElementById("grouptable");
+        for (data in groupData) {
+          let tr = document.createElement("tr");
+          let td = document.createElement("td");
+          td.textContent = groupData[data].title;
+          tr.appendChild(td);
+          table.appendChild(tr);
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    }
+
+    getNewSummary();
+  </script> -->
+</html>
